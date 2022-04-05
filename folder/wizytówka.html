@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang"pl">
+<head>
+<title>awizo</title>
+<meta charset="UTF-8">
+<meta name="Ganerator" content="Visual Studio Code">
+<meta name="Robots" content="index">
+<style type="text/css">
+
+#imie {
+  width:500px;
+  height:100%;
+  margin:0 auto;
+  border:3px solid ;
+  border
+  font-family: "Times New Roman";
+  font-size: 300%;
+  background-color: green;
+  border-top-left-radius: 18%;
+  border-top-right-radius: 18%;
+  border-bottom-right-radius: 18%;
+  border-bottom-left-radius: 18%;
+}
+#klasa {
+  width:400px;
+  height:100%;
+  margin:0 auto;
+  border:3px solid ;
+  border
+  font-family: "Times New Roman";
+  font-size: 300%;
+  background-color: green;
+  border-top-left-radius: 18%;
+  border-top-right-radius: 18%;
+  border-bottom-right-radius: 18%;
+  border-bottom-left-radius: 18%;
+}
+</style>
+<script type="text/javascript">
+    function odliczanie()
+    {
+        var dzisiaj = new Date();
+
+        var dzien = dzisiaj.getDate();
+        var miesiac = dzisiaj.getMonth()+1;
+        var rok = dzisiaj.getFullYear();
+
+        var godzina = dzisiaj.getHours();
+        if(godzina<10) godzina="0"+godzina;
+        var minuta = dzisiaj.getMinutes();
+        if(minuta<10) minuta="0"+minuta;
+        var sekunda = dzisiaj.getSeconds();  
+        if(sekunda<10) sekunda="0"+sekunda;
+      
+        document.getElementById("czas").innerHTML = 
+        dzien+"/"+miesiac+"/"+rok+"||"+godzina+":"+minuta+":"+sekunda;
+        
+        setTimeout("odliczanie()",1000);
+    }
+    
+</script>
+</head>
+<body onload="odliczanie();" bgcolor="yellow">
+    <center><div id="czas"></div> <br>
+    <div id="imie"></div><br>
+    <div id="klasa"></div></center>
+        <script type="text/javascript">
+          document.getElementById("imie").innerHTML = "Mateusz Kowalczyk";
+          document.getElementById("imie").style.backgroundColor = "Green";
+          document.getElementById("imie").style.fontSize = "50px";
+
+          document.getElementById("klasa").innerHTML = "1l grupa 2";
+          document.getElementById("klasa").style.backgroundColor = "Green";
+          document.getElementById("klasa").style.fontSize = "50px";
+        </script>
+</body>
+</html>
